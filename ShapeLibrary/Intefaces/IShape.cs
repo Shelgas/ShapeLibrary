@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ShapeLibrary.Intefaces
 {
-    internal interface IShape
+    public interface IShape
     {
+        public double GetArea();
     }
 }

@@ -30,5 +30,15 @@ namespace ShapeLibrary.Shapes
             double P = (SideA + SideB + SideC) / 2;
             return Math.Sqrt(P * (P - SideA) * (P - SideB) * (P - SideC));
         }
+
+        public bool IsRightTriangle()
+        {
+            double[] sides = [SideA, SideB, SideC];
+            Array.Sort(sides);
+
+            if (Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) == Math.Pow(sides[2], 2))
+                return true;
+            return false;
+        }
     }
 }
